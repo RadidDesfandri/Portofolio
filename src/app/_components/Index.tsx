@@ -15,7 +15,7 @@ const HomepageEn = () => {
         />
 
         {/* Content here */}
-        <div className="z-20 mx-auto w-full max-w-5xl px-10 py-20">
+        <div className="z-20 mx-auto w-full max-w-4xl px-10 py-20">
           <div className="text-hijau text-4xl">Portofolio radid</div>
           <div className="text-white">white</div>
           <div className="text-hitam">hitam</div>

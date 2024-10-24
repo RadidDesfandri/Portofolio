@@ -52,7 +52,7 @@ const NavbarEn = () => {
     >
       <div className="flex justify-between">
         <div className="flex items-center gap-2">
-          <div className="flex items-center justify-center rounded-full border-2 border-gray-400 bg-green-500 shadow-md">
+          <div className="flex items-center justify-center rounded-full border-2 border-gray-400 bg-gray-500 shadow-md">
             <Image
               src={"/profile.jpg"}
               alt="Profile"
