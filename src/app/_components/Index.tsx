@@ -57,7 +57,7 @@ const HomepageEn = () => {
             text2="Web Developers"
             duration={150}
             activeAim
-            className="text-start text-2xl font-bold text-white"
+            className="text-start text-xl font-bold text-white md:text-2xl"
           />
           <ul className="flex list-disc items-center gap-4 px-3 text-xs font-medium text-neutral-400">
             <li>Based in Bandung</li>
