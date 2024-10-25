@@ -50,7 +50,9 @@ const NavbarEn = () => {
     <div
       className={`fixed z-50 block w-full rounded-b-xl px-5 py-3 text-white transition-all duration-300 md:hidden ${scrolled ? "bg-white text-black" : "bg-transparent"}`}
     >
-      <div className="flex justify-between">
+      <div
+        className={`flex justify-between transition-all duration-300 ${scrolled ? "text-black" : "text-white"}`}
+      >
         <div className="flex items-center gap-2">
           <div className="flex items-center justify-center rounded-full border-2 border-gray-400 bg-gray-500 shadow-md">
             <Image

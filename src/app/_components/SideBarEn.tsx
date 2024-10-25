@@ -24,7 +24,7 @@ const SideBarEn = () => {
     if (pathname.includes("/id")) {
       router.push("/");
     } else {
-      router.push("/id");
+      router.push("/");
     }
     setActiveLang(!activeLang);
   };
@@ -60,8 +60,8 @@ const SideBarEn = () => {
           />
         </div>
         <div className="hidden scale-0 text-white transition-all duration-300 group-hover:block group-hover:scale-100">
-          <p className="">Radid desfandri</p>
-          <p className="text-center text-xs font-medium text-neutral-700 hover:text-neutral-600">
+          <p className="font-semibold">Radid desfandri</p>
+          <p className="text-center text-xs font-medium text-neutral-300 ">
             @dietyy
           </p>
         </div>
