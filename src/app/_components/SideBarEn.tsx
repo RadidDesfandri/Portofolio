@@ -30,10 +30,10 @@ const SideBarEn = () => {
   };
 
   return (
-    <div className="group fixed z-10 hidden h-full w-12 cursor-pointer place-items-center rounded-r-xl bg-transparent px-2 pt-16 shadow-md shadow-slate-100/30 transition-all duration-300 hover:w-44 hover:px-4 md:block">
+    <div className="group fixed z-10 hidden h-full w-14 cursor-pointer place-items-center rounded-r-xl bg-transparent px-2 pt-16 shadow-md shadow-slate-100/30 transition-all duration-300 hover:w-48 hover:px-2 md:block">
       {/* Profile */}
       <div className="flex flex-col items-center">
-        <div className="absolute top-3 -z-10 hidden h-[90px] w-full px-3 transition-all duration-500 group-hover:block">
+        <div className="absolute top-3 -z-10 hidden h-[90px] w-full px-2 transition-all duration-500 group-hover:block">
           <div className="flex h-full w-full items-end justify-end rounded-md bg-neutral-800 px-1 pb-1">
             <div
               onClick={handleChangeLanguage}
@@ -56,7 +56,7 @@ const SideBarEn = () => {
             alt="Profile"
             width={100}
             height={100}
-            className="h-7 w-7 rounded-full object-cover transition-all duration-500 group-hover:h-20 group-hover:w-20"
+            className="h-9 w-9 rounded-full object-cover transition-all duration-500 group-hover:h-20 group-hover:w-20"
           />
         </div>
         <div className="hidden scale-0 text-white transition-all duration-300 group-hover:block group-hover:scale-100">
@@ -71,7 +71,7 @@ const SideBarEn = () => {
       </div>
 
       {/* Menu items */}
-      <div className="mt-24 flex w-full flex-col items-center gap-3 border-t pt-7 text-gray-500 transition duration-300 group-hover:items-start">
+      <div className="mt-14 flex w-full flex-col items-center gap-3 border-t pt-7 text-gray-500 transition duration-300 group-hover:items-start">
         {menuItem.map((menu, idx) => {
           const activeMenu = pathname === menu.href;
           return (

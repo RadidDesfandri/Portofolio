@@ -9,52 +9,11 @@ import WalkingCharacter from "@/components/WalkingCharacter";
 import IconCloud from "@/components/ui/icon-cloud";
 import { useState } from "react";
 import { TbArrowsExchange } from "react-icons/tb";
+import { skillItemEn, slugs } from "@/variables/constAbout";
 
 const AboutpageEn = () => {
-  const skillItem = [
-    { img: "github.svg", skill: "Github" },
-    { img: "css.svg", skill: "CSS" },
-    { img: "html.svg", skill: "HTML" },
-    { img: "js.svg", skill: "Javascript" },
-    { img: "nextjs.svg", skill: "Next JS" },
-    { img: "node-js.svg", skill: "Node JS" },
-    { img: "react.svg", skill: "React Native" },
-    { img: "redux.svg", skill: "Redux" },
-    { img: "supabase.svg", skill: "Supabase" },
-    { img: "tailwind.svg", skill: "Tailwind" },
-    { img: "ts.svg", skill: "Typescript" },
-    { img: "vite.svg", skill: "Vite" },
-  ];
-
-  const slugs = [
-    "supabase",
-    "typescript",
-    "javascript",
-    "react",
-    "html5",
-    "css3",
-    "express",
-    "nextdotjs",
-    "prisma",
-    "amazonaws",
-    "postgresql",
-    "vercel",
-    "testinglibrary",
-    "cypress",
-    "docker",
-    "git",
-    "jira",
-    "github",
-    "visualstudiocode",
-    "sonarqube",
-    "figma",
-    "tailwind",
-    "vite",
-    "redux",
-  ];
-
-  const firstRow = skillItem.slice(0, skillItem.length / 2);
-  const secondRow = skillItem.slice(skillItem.length / 2);
+  const firstRow = skillItemEn.slice(0, skillItemEn.length / 2);
+  const secondRow = skillItemEn.slice(skillItemEn.length / 2);
   const [skillActive, setSkillActive] = useState(false);
   const [showHoverSkill, setShowHoverSkill] = useState(false);
 
