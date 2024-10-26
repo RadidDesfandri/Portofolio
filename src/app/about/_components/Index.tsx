@@ -30,12 +30,14 @@ const AboutpageEn = () => {
 
         {/* Content here */}
         <div className="z-20 mx-auto h-full w-full max-w-4xl px-5 py-20 md:px-10">
-          <div className="text-xl font-semibold text-white md:text-2xl">
+          <div className="font-sans text-xl font-semibold text-white md:text-2xl">
             About
           </div>
-          <p className="text-sm font-medium text-neutral-400">A short story</p>
+          <p className="font-sans text-sm font-medium text-neutral-400">
+            A short story
+          </p>
 
-          <div className="mt-5 flex flex-col gap-4 border-t border-dashed border-gray-600 py-4 text-sm text-gray-300">
+          <div className="mt-5 flex flex-col gap-4 border-t border-dashed border-gray-600 py-4 font-sans text-sm text-gray-300">
             <p>
               I’m a recent graduate from a vocational high school with a major
               in Multimedia, and I began learning to code in my third year of
@@ -62,7 +64,7 @@ const AboutpageEn = () => {
           </div>
 
           <div className="border-t border-gray-600 py-5 text-white">
-            <div className="relative flex items-center gap-2 text-xl">
+            <div className="relative flex items-center gap-2 font-sans text-xl">
               <FaCode />
               <p>Skills</p>
               <TbArrowsExchange
@@ -78,7 +80,7 @@ const AboutpageEn = () => {
                 </div>
               )}
             </div>
-            <p className="text-sm font-medium text-neutral-400">
+            <p className="font-sans text-sm font-medium text-neutral-400">
               My coding skills
             </p>
 

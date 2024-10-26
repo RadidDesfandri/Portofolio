@@ -44,7 +44,7 @@ const SideBarEn = () => {
               {activeLang ? <FaGlobeAfrica /> : <FaGlobeAsia />}
             </div>
             {hoverLang && (
-              <div className="absolute right-2 top-7 w-fit rounded-md bg-white/90 px-2 py-1 text-center text-[9px] text-hitam transition-all duration-300">
+              <div className="absolute right-2 top-7 w-fit rounded-md bg-white/90 px-2 py-1 text-center font-sans text-[9px] text-hitam transition-all duration-300">
                 Change Language
               </div>
             )}
@@ -60,8 +60,8 @@ const SideBarEn = () => {
           />
         </div>
         <div className="hidden scale-0 text-white transition-all duration-300 group-hover:block group-hover:scale-100">
-          <p className="font-semibold">Radid desfandri</p>
-          <p className="text-center text-xs font-medium text-neutral-300 ">
+          <p className="font-sans font-semibold">Radid desfandri</p>
+          <p className="text-center font-sans text-xs font-medium text-neutral-300">
             @dietyy
           </p>
         </div>
@@ -78,10 +78,10 @@ const SideBarEn = () => {
             <Link
               key={idx}
               href={menu.href}
-              className={`flex w-fit items-center justify-center gap-2 rounded-md p-1 py-1 transition duration-300 group-hover:w-full group-hover:justify-start group-hover:px-2 ${activeMenu ? "bg-neutral-800 text-white" : "text-gray-500"}`}
+              className={`flex w-fit items-center justify-center gap-2 rounded-md p-1 py-1 font-sans transition duration-300 group-hover:w-full group-hover:justify-start group-hover:px-2 ${activeMenu ? "bg-neutral-800 text-white" : "text-gray-500"}`}
             >
               <menu.icon size={18} />
-              <p className="hidden text-xs transition duration-300 group-hover:block">
+              <p className={`hidden font-sans text-xs transition duration-300 group-hover:block ${activeMenu && "font-semibold"}`}>
                 {menu.label}
               </p>
             </Link>

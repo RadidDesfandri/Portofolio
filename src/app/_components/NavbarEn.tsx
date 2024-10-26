@@ -48,10 +48,10 @@ const NavbarEn = () => {
 
   return (
     <div
-      className={`fixed z-50 block w-full rounded-b-xl px-5 py-3 text-white transition-all duration-300 md:hidden ${scrolled ? "bg-white text-black" : "bg-transparent"}`}
+      className={`fixed z-50 block w-full rounded-b-xl px-5 py-3 text-white transition-all duration-300 md:hidden ${scrolled ? "shadow-sm shadow-gray-400/15 backdrop-blur-sm" : "bg-transparent"}`}
     >
       <div
-        className={`flex justify-between transition-all duration-300 ${scrolled ? "text-black" : "text-white"}`}
+        className={`flex justify-between text-white transition-all duration-300`}
       >
         <div className="flex items-center gap-2">
           <div className="flex items-center justify-center rounded-full border-2 border-gray-400 bg-gray-500 shadow-md">
@@ -64,7 +64,7 @@ const NavbarEn = () => {
             />
           </div>
           <p
-            className={`font-semibold transition-all duration-300 ${scrolled ? "text-hitam" : "text-white"}`}
+            className={`font-sans font-semibold text-white transition-all duration-300`}
           >
             Radid Desfandri
           </p>
@@ -126,7 +126,11 @@ const NavbarEn = () => {
                         className={`flex items-center gap-3 rounded-md px-2 py-2 ${activeMenu ? "bg-neutral-800 text-white" : ""}`}
                       >
                         <menu.icon size={20} />
-                        <p>{menu.label}</p>
+                        <p
+                          className={`font-sans ${activeMenu && "font-semibold"}`}
+                        >
+                          {menu.label}
+                        </p>
                       </Link>
                     );
                   })}

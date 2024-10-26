@@ -13,7 +13,7 @@ const config: Config = {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			hijau: '#1DB954',
-  			hitam: '#191414',
+  			hitam: '#2B2B2B',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
