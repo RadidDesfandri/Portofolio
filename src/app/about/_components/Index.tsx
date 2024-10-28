@@ -1,7 +1,5 @@
 "use client";
 
-import GridPattern from "@/components/ui/animated-grid-pattern";
-import Particles from "@/components/ui/particles";
 import { FaCode } from "react-icons/fa";
 import SkillsCard from "./SkillsCard";
 import Marquee from "@/components/ui/marquee";
@@ -10,6 +8,7 @@ import IconCloud from "@/components/ui/icon-cloud";
 import { useState } from "react";
 import { TbArrowsExchange } from "react-icons/tb";
 import { skillItemEn, slugs } from "@/variables/constAbout";
+import AnimateSlideIn from "@/components/AnimateSlideIn";
 
 const AboutpageEn = () => {
   const firstRow = skillItemEn.slice(0, skillItemEn.length / 2);
@@ -18,17 +17,9 @@ const AboutpageEn = () => {
   const [showHoverSkill, setShowHoverSkill] = useState(false);
 
   return (
-    <div className="h-full w-full bg-black">
-      <div className="relative flex h-full flex-col items-center">
-        <GridPattern />
-        <Particles
-          className="absolute inset-0"
-          quantity={100}
-          ease={80}
-          refresh
-        />
-
-        {/* Content here */}
+    <div className="h-full w-full">
+      {/* Content here */}
+      <AnimateSlideIn>
         <div className="z-20 mx-auto h-full w-full max-w-4xl px-5 py-20 md:px-10">
           <div className="font-sans text-xl font-semibold text-white md:text-2xl">
             About
@@ -99,7 +90,7 @@ const AboutpageEn = () => {
                       return <SkillsCard key={skill.img} {...skill} />;
                     })}
                   </Marquee>
-                  <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-gray-600/5 dark:from-background"></div>
+                  <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-black/5 dark:from-background"></div>
                   <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-gray-600/5 dark:from-background"></div>
                 </div>
               )}
@@ -110,7 +101,7 @@ const AboutpageEn = () => {
             <WalkingCharacter />
           </div>
         </div>
-      </div>
+      </AnimateSlideIn>
     </div>
   );
 };

@@ -7,8 +7,7 @@ import Link from "next/link";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
-import GridPattern from "@/components/ui/animated-grid-pattern";
-import Particles from "@/components/ui/particles";
+import AnimateSlideIn from "@/components/AnimateSlideIn";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -20,8 +19,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<{ title: string }> {
-  const { id } = await params; 
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<{ title: string }> {
+  const { id } = await params;
   const project = dataProjectEn.find((p) => p.id === id);
   return {
     title: project ? project.judul : "Project Not Found",
@@ -37,17 +38,9 @@ const ProjectDetailEn = async ({ params }: PageProps) => {
   }
 
   return (
-    <div className="h-full w-full bg-black">
-      <div className="relative flex h-full flex-col items-center">
-        <GridPattern />
-        <Particles
-          className="absolute inset-0"
-          quantity={100}
-          ease={80}
-          refresh
-        />
-
-        {/* Konten */}
+    <div className="h-full w-full">
+      {/* Konten */}
+      <AnimateSlideIn>
         <div className="z-20 mx-auto h-full w-full max-w-4xl px-5 py-20 md:px-10">
           <Link
             href={"/project"}
@@ -64,7 +57,7 @@ const ProjectDetailEn = async ({ params }: PageProps) => {
           <div className="mt-3 font-sans text-2xl font-semibold text-white md:text-3xl">
             {project?.judul}
           </div>
-          <div className="mt-2 font-sans text-xs text-neutral-400 md:text-base">
+          <div className="mt-2 font-sans text-sm text-neutral-400 md:text-base">
             {project?.desc}
           </div>
 
@@ -135,7 +128,7 @@ const ProjectDetailEn = async ({ params }: PageProps) => {
                   <p className="font-sans text-lg font-medium md:text-xl">
                     1. Clone using git
                   </p>
-                  <div className="relative mt-5 rounded-lg bg-hitam px-5 py-5 font-sans font-medium">
+                  <div className="relative mt-5 rounded-lg bg-hitam px-5 py-5 font-sans text-sm font-medium md:text-base">
                     <p>git clone {project.githubLink}</p>
 
                     <div className="absolute right-2 top-2 cursor-pointer rounded-md border-2 border-neutral-400 p-1 text-neutral-400">
@@ -148,7 +141,7 @@ const ProjectDetailEn = async ({ params }: PageProps) => {
                   <p className="font-sans text-lg font-medium md:text-xl">
                     2. Install dependencies
                   </p>
-                  <div className="relative mt-5 rounded-lg bg-hitam px-5 py-5 font-sans font-medium">
+                  <div className="relative mt-5 rounded-lg bg-hitam px-5 py-5 font-sans text-sm font-medium md:text-base">
                     <p>npm install</p>
                     <p># or</p>
                     <p>yarn</p>
@@ -163,7 +156,7 @@ const ProjectDetailEn = async ({ params }: PageProps) => {
                   <p className="font-sans text-lg font-medium md:text-xl">
                     3. Run development server
                   </p>
-                  <div className="relative mt-5 rounded-lg bg-hitam px-5 py-5 font-sans font-medium">
+                  <div className="relative mt-5 rounded-lg bg-hitam px-5 py-5 font-sans text-sm font-medium md:text-base">
                     <p>npm install</p>
                     <p># or</p>
                     <p>yarn dev</p>
@@ -175,7 +168,7 @@ const ProjectDetailEn = async ({ params }: PageProps) => {
                   </div>
                 </div>
 
-                <div className="font-sans">
+                <div className="font-sans text-sm md:text-base">
                   Open{" "}
                   <span className="cursor-pointer text-teal-500 hover:underline">
                     http://localhost:3000
@@ -186,7 +179,7 @@ const ProjectDetailEn = async ({ params }: PageProps) => {
             </div>
           </div>
         </div>
-      </div>
+      </AnimateSlideIn>
     </div>
   );
 };

@@ -4,12 +4,12 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FaGlobeAfrica, FaGlobeAsia, FaLeaf } from "react-icons/fa";
 import { MdOutlineClose, MdOutlineMenu } from "react-icons/md";
-import MenuLanguage from "./MenuLanguage";
 import GridPattern from "@/components/ui/animated-grid-pattern";
 import { AiOutlineHome } from "react-icons/ai";
 import { usePathname } from "next/navigation";
 import { RiEditFill } from "react-icons/ri";
 import Link from "next/link";
+import MenuLanguage from "@/app/_components/MenuLanguage";
 
 const NavbarEn = () => {
   const [scrolled, setScrolled] = useState(false);

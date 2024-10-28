@@ -114,3 +114,55 @@ body {
 .animate-wave {
   animation: wave 2s ease-in-out infinite;
 }
+
+@keyframes walk {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(25px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  75% {
+    transform: translateX(75px);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+.animate-walk {
+  animation: walk 10s linear infinite;
+}
+
+.animate-wave {
+  animation: wave 2s ease-in-out infinite;
+}
+
+@layer components {
+  .loader {
+    border-top-color: #3498db;
+    animation: spin 1s ease-in-out infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
