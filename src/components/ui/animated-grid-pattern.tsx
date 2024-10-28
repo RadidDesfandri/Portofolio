@@ -2,7 +2,6 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import { motion } from "framer-motion";
-
 import { cn } from "@/lib/utils";
 
 interface GridPatternProps {
@@ -24,10 +23,10 @@ export function GridPattern({
   x = -1,
   y = -1,
   strokeDasharray = 0,
-  numSquares = 50,
+  numSquares = 15,
   className,
-  maxOpacity = 0.5,
-  duration = 4,
+  maxOpacity = 0.3,
+  duration = 200,
   repeatDelay = 0.5,
   ...props
 }: GridPatternProps) {
@@ -43,7 +42,6 @@ export function GridPattern({
     ];
   }
 
-  // Adjust the generateSquares function to return objects with an id, x, and y
   function generateSquares(count: number) {
     return Array.from({ length: count }, (_, i) => ({
       id: i,
@@ -51,7 +49,6 @@ export function GridPattern({
     }));
   }
 
-  // Function to update a single square's position
   const updateSquarePosition = (id: number) => {
     setSquares((currentSquares) =>
       currentSquares.map((sq) =>
@@ -65,14 +62,12 @@ export function GridPattern({
     );
   };
 
-  // Update squares to animate in
   useEffect(() => {
     if (dimensions.width && dimensions.height) {
       setSquares(generateSquares(numSquares));
     }
   }, [dimensions, numSquares]);
 
-  // Resize observer to update container dimensions
   useEffect(() => {
     const resizeObserver = new ResizeObserver((entries) => {
       for (let entry of entries) {
@@ -99,7 +94,7 @@ export function GridPattern({
       ref={containerRef}
       aria-hidden="true"
       className={cn(
-        "pointer-events-none absolute inset-0 h-full w-full fill-gray-400/5 stroke-gray-400/5",
+        "pointer-events-none absolute inset-0 h-full w-full stroke-gray-400/5",
         className,
       )}
       {...props}

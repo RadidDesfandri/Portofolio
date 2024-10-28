@@ -1,5 +1,4 @@
-import GridPattern from "@/components/ui/animated-grid-pattern";
-import Particles from "@/components/ui/particles";
+import AnimateSlideIn from "@/components/AnimateSlideIn";
 import TypingAnimation from "@/components/ui/typing-animation";
 import WalkingCharacter from "@/components/WalkingCharacter";
 import Link from "next/link";
@@ -40,17 +39,9 @@ const HomepageEn = () => {
     { href: "https://github.com/RadidDesfandri", icon: FaGithub },
   ];
   return (
-    <div className="h-full w-full bg-black">
-      <div className="relative flex h-full flex-col items-center">
-        <GridPattern />
-        <Particles
-          className="absolute inset-0"
-          quantity={100}
-          ease={80}
-          refresh
-        />
-
-        {/* Content here */}
+    <div className="h-full w-full">
+      {/* Content here */}
+      <AnimateSlideIn>
         <div className="z-20 mx-auto h-full w-full max-w-4xl px-5 py-20 md:px-10">
           <TypingAnimation
             text1="Radid Desfandri"
@@ -86,9 +77,9 @@ const HomepageEn = () => {
                 return (
                   <div
                     key={idx}
-                    className="relative flex h-32 w-full flex-col items-center justify-center rounded-md border border-gray-500/10 px-2 py-4 shadow-sm shadow-gray-400/15 backdrop-blur-sm"
+                    className="relative flex h-32 w-full flex-col items-center justify-center rounded-md border border-gray-500/40 px-2 py-4 shadow-sm shadow-gray-400/15 backdrop-blur-sm"
                   >
-                    <div className="absolute -top-5 rounded-full border border-gray-500/10 p-3 shadow-sm shadow-gray-400/15 backdrop-blur-sm">
+                    <div className="absolute -top-5 rounded-full border border-gray-500/40 p-3 shadow-sm shadow-gray-400/15 backdrop-blur-sm">
                       <card.icon size={25} />
                     </div>
 
@@ -130,7 +121,7 @@ const HomepageEn = () => {
             <WalkingCharacter />
           </div>
         </div>
-      </div>
+      </AnimateSlideIn>
     </div>
   );
 };

@@ -1,5 +1,4 @@
-import GridPattern from "@/components/ui/animated-grid-pattern";
-import Particles from "@/components/ui/particles";
+import AnimateSlideIn from "@/components/AnimateSlideIn";
 import { dataProjectEn } from "@/variables/constDataProject";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,17 +6,9 @@ import React from "react";
 
 const ProjectpageEn = () => {
   return (
-    <div className="h-full w-full bg-black">
-      <div className="relative flex h-full flex-col items-center">
-        <GridPattern />
-        <Particles
-          className="absolute inset-0"
-          quantity={100}
-          ease={80}
-          refresh
-        />
-
-        {/* Content here */}
+    <div className="h-full w-full">
+      {/* Content here */}
+      <AnimateSlideIn>
         <div className="z-20 mx-auto h-full w-full max-w-4xl px-5 py-20 md:px-10">
           <div className="font-sans text-xl font-semibold text-white md:text-2xl">
             Project
@@ -35,7 +26,7 @@ const ProjectpageEn = () => {
                   <Link
                     key={card.judul}
                     href={`/project/${card.id}`}
-                    className="w-full overflow-hidden rounded-xl border border-neutral-200/20 bg-neutral-900 shadow-sm transition-all duration-300 hover:scale-[102%] hover:border-teal-300 hover:shadow-lg"
+                    className="w-full z-20 overflow-hidden rounded-xl border border-neutral-200/20 bg-neutral-900 shadow-sm transition-all duration-300 hover:scale-[102%] hover:border-teal-300 hover:shadow-lg"
                   >
                     <Image
                       width={200}
@@ -71,7 +62,7 @@ const ProjectpageEn = () => {
             </div>
           </div>
         </div>
-      </div>
+      </AnimateSlideIn>
     </div>
   );
 };
