@@ -114,7 +114,7 @@ const ProjectDetailEn = async ({ params }: PageProps) => {
                 width={1000}
                 height={400}
                 src={`/project/${project.thumbnail}`}
-                className="w-full object-cover transition-all duration-300 hover:scale-[102%]"
+                className="w-full scale-100 bg-gray-700 object-cover transition-all duration-300 hover:scale-[102%]"
               />
             </div>
 
