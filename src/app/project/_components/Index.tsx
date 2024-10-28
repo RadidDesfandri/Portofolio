@@ -1,4 +1,5 @@
 import AnimateSlideIn from "@/components/AnimateSlideIn";
+import CustomLink from "@/components/CustomLink";
 import { dataProjectEn } from "@/variables/constDataProject";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,10 +24,10 @@ const ProjectpageEn = () => {
 
               {dataProjectEn.map((card) => {
                 return (
-                  <Link
+                  <CustomLink
                     key={card.judul}
                     href={`/project/${card.id}`}
-                    className="w-full z-20 overflow-hidden rounded-xl border border-neutral-200/20 bg-neutral-900 shadow-sm transition-all duration-300 hover:scale-[102%] hover:border-teal-300 hover:shadow-lg"
+                    className="w-full z-20 overflow-hidden rounded-xl border border-neutral-200/20 bg-neutral-900 shadow-sm transition-all duration-300 scale-100 cursor-pointer hover:scale-[102%] hover:border-teal-300 hover:shadow-lg"
                   >
                     <Image
                       width={200}
@@ -36,10 +37,10 @@ const ProjectpageEn = () => {
                       className="h-[190px] w-full object-cover"
                     />
                     <div className="flex flex-col gap-2 px-4 py-6">
-                      <p className="font-sans text-lg font-medium">
+                      <p className="font-sans text-start text-lg font-medium">
                         {card.judul}
                       </p>
-                      <p className="line-clamp-2 h-10 font-sans">{card.desc}</p>
+                      <p className="line-clamp-2 text-start h-10 font-sans">{card.desc}</p>
 
                       <div className="flex flex-wrap items-center gap-2">
                         {card.framework.map((framework, idx) => {
@@ -56,7 +57,7 @@ const ProjectpageEn = () => {
                         })}
                       </div>
                     </div>
-                  </Link>
+                  </CustomLink>
                 );
               })}
             </div>

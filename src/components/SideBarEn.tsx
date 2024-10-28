@@ -7,6 +7,7 @@ import { useState } from "react";
 import { AiOutlineHome } from "react-icons/ai";
 import { FaGlobeAfrica, FaGlobeAsia, FaLeaf } from "react-icons/fa";
 import { RiEditFill } from "react-icons/ri";
+import CustomLink from "./CustomLink";
 
 const SideBarEn = () => {
   const [hoverLang, setHoverLang] = useState(false);
@@ -81,7 +82,9 @@ const SideBarEn = () => {
               className={`flex w-fit items-center justify-center gap-2 rounded-md p-1 py-1 font-sans transition duration-300 group-hover:w-full group-hover:justify-start group-hover:px-2 ${activeMenu ? "bg-neutral-800 text-white" : "text-gray-500"}`}
             >
               <menu.icon size={18} />
-              <p className={`hidden font-sans text-xs transition duration-300 group-hover:block ${activeMenu && "font-semibold"}`}>
+              <p
+                className={`hidden font-sans text-xs transition duration-300 group-hover:block ${activeMenu && "font-semibold"}`}
+              >
                 {menu.label}
               </p>
             </Link>

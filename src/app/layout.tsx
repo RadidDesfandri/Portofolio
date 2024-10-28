@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import SideBarEn from "./_components/SideBarEn";
-import NavbarEn from "./_components/NavbarEn";
-import WalkingCharacter from "@/components/WalkingCharacter";
+import SideBarEn from "../components/SideBarEn";
 import GridPattern from "@/components/ui/animated-grid-pattern";
 import Particles from "@/components/ui/particles";
+import NavbarEn from "@/components/NavbarEn";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -39,7 +38,6 @@ export default function RootLayout({
             className="absolute inset-0"
             quantity={100}
             ease={80}
-            refresh
           />
           <SideBarEn />
           <NavbarEn />
