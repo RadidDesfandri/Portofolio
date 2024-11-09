@@ -1,13 +1,13 @@
 import React from "react";
 import { dataProjectEn } from "@/variables/constDataProject";
 import { notFound } from "next/navigation";
-import { LuClipboardCopy } from "react-icons/lu";
 import Image from "next/image";
 import Link from "next/link";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { IoMdArrowBack } from "react-icons/io";
 import AnimateSlideIn from "@/components/AnimateSlideIn";
+import Clippboard from "@/components/Clippboard";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -128,44 +128,21 @@ const ProjectDetailEn = async ({ params }: PageProps) => {
                   <p className="font-sans text-lg font-medium md:text-xl">
                     1. Clone using git
                   </p>
-                  <div className="relative mt-5 rounded-lg bg-hitam px-5 py-5 font-sans text-sm font-medium md:text-base">
-                    <p>git clone {project.githubLink}</p>
-
-                    <div className="absolute right-2 top-2 cursor-pointer rounded-md border-2 border-neutral-400 p-1 text-neutral-400">
-                      <LuClipboardCopy />
-                    </div>
-                  </div>
+                  <Clippboard textCopy={`git clone  ${project.githubLink}`} />
                 </div>
 
                 <div>
                   <p className="font-sans text-lg font-medium md:text-xl">
                     2. Install dependencies
                   </p>
-                  <div className="relative mt-5 rounded-lg bg-hitam px-5 py-5 font-sans text-sm font-medium md:text-base">
-                    <p>npm install</p>
-                    <p># or</p>
-                    <p>yarn</p>
-
-                    <div className="absolute right-2 top-2 cursor-pointer rounded-md border-2 border-neutral-400 p-1 text-neutral-400">
-                      <LuClipboardCopy />
-                    </div>
-                  </div>
+                  <Clippboard textCopy="npm install" multiple/>
                 </div>
 
                 <div>
                   <p className="font-sans text-lg font-medium md:text-xl">
                     3. Run development server
                   </p>
-                  <div className="relative mt-5 rounded-lg bg-hitam px-5 py-5 font-sans text-sm font-medium md:text-base">
-                    <p>npm install</p>
-                    <p># or</p>
-                    <p>yarn dev</p>
-                    <p># or</p>
-                    <p>pnpm run dev</p>
-                    <div className="absolute right-2 top-2 cursor-pointer rounded-md border-2 border-neutral-400 p-1 text-neutral-400">
-                      <LuClipboardCopy />
-                    </div>
-                  </div>
+                  <Clippboard quadruple textCopy="npm run dev"/>
                 </div>
 
                 <div className="font-sans text-sm md:text-base">
