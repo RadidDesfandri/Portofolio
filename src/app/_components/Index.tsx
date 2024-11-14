@@ -4,7 +4,7 @@ import WalkingCharacter from "@/components/WalkingCharacter";
 import Link from "next/link";
 import React from "react";
 import { AiOutlineNodeIndex } from "react-icons/ai";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaDownload, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { MdDesignServices, MdOutlineWeb, MdPayments } from "react-icons/md";
 
 const HomepageEn = () => {
@@ -43,13 +43,28 @@ const HomepageEn = () => {
       {/* Content here */}
       <AnimateSlideIn>
         <div className="z-20 mx-auto h-full w-full max-w-4xl px-5 py-20 md:px-10">
-          <TypingAnimation
-            text1="Radid Desfandri"
-            text2="Web Developers"
-            duration={150}
-            activeAim
-            className="text-start text-xl font-bold text-white md:text-2xl"
-          />
+          <div className="flex items-center justify-between">
+            <TypingAnimation
+              text1="Radid Desfandri"
+              text2="Web Developers"
+              duration={150}
+              activeAim
+              className="text-start text-xl font-bold text-white md:text-2xl"
+            />
+            <Link
+              target="_blank"
+              href={
+                "https://drive.google.com/file/d/17MApCXl5sPuJp7Xgp0Gk4leRtrksVpBg/view?usp=sharing"
+              }
+              className="flex items-center gap-x-2 rounded-full border px-2 py-1"
+            >
+              <h1 className="text-xs font-semibold text-white md:text-sm">
+                Download Resume
+              </h1>
+              <FaDownload className="h-3 w-3 md:h-5 md:w-5" />
+            </Link>
+          </div>
+
           <ul className="flex list-disc items-center gap-4 px-3 text-xs font-medium text-neutral-400">
             <li>Based in Bandung</li>
           </ul>
