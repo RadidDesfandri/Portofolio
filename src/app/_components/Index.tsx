@@ -54,7 +54,7 @@ const HomepageEn = () => {
             <Link
               target="_blank"
               href={
-                "https://drive.google.com/file/d/17MApCXl5sPuJp7Xgp0Gk4leRtrksVpBg/view?usp=sharing"
+                "https://docs.google.com/document/d/17QNuLLBYkRC54cYN3fuaUnXPCsbE4Ks0/edit"
               }
               className="flex items-center gap-x-2 rounded-full border px-2 py-1"
             >
@@ -66,7 +66,7 @@ const HomepageEn = () => {
           </div>
 
           <ul className="flex list-disc items-center gap-4 px-3 text-xs font-medium text-neutral-400">
-            <li>Based in Bandung</li>
+            <li>Based in Jakarta</li>
           </ul>
 
           <div className="mt-5 text-xs leading-loose text-neutral-200">
