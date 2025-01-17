@@ -41,7 +41,7 @@ export const dataProjectEn = [
     demo: true,
     includeBE: true,
     githubLink: "https://github.com/RadidDesfandri/Realtime-Chat",
-    demoLink: "https://realtime-chat-ce6f.vercel.app",
+    demoLink: "https://realtime-chat-nine-chi.vercel.app",
     framework: [
       { img: "nextjs.svg" },
       { img: "ts.svg" },
