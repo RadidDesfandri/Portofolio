@@ -24,7 +24,7 @@ export const dataProjectEn = [
     demo: true,
     includeBE: true,
     githubLink: "https://github.com/purwadhikafullstack/JCWD0408-02.git",
-    demoLink: "https://jcwd040802.purwadhikabootcamp.com",
+    demoLink: "https://property-rent-app-iota.vercel.app",
     framework: [
       { img: "nextjs.svg" },
       { img: "ts.svg" },
