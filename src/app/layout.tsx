@@ -18,7 +18,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Prtfl Radid",
+  title: "Portofolio Radid Desfandri",
   description: "Sebuah website yang mendeskripsikan tentang saya",
 };
 
